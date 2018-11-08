@@ -169,7 +169,8 @@ module.exports = app => {
         } else {
           return res.send({
             success: true,
-            message: "Good"
+            message: "Good",
+            userId: sessions[0].userId
           });
         }
       }
