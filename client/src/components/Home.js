@@ -259,7 +259,6 @@ class Home extends Component {
             <br />
             <button onClick={this.onSignUp}>Sign Up</button>
           </div>
-		  <li><Link to='/'>Class Lookup Page</Link></li>
         </div>
       );
     }

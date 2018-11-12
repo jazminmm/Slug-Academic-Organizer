@@ -5,7 +5,7 @@ import React from 'react';
 const Error = () => {
   return (
     <div>
-      <p>Error: You Shouldn't Be Here. :P</p>
+      <p>Error: You Shouldn't Be Here.</p>
     </div>
   );
 };

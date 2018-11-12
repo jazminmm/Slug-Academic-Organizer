@@ -1,0 +1,38 @@
+body {
+  background-color: #f8f8fb; /*light grayish blue background*/
+  padding: 20px;
+  margin: 0;
+}
+h1, h2, p, ul, li {
+  font-family: sans-serif;
+}
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+ul.header {
+  background-color: #7d9fb5; /*slightly desaturated blue navbar*/
+  padding: 0;
+}
+ul.header li a { /*black header words, very dark gray option: 474747*/
+  color: #111;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+.content {
+  background-color: #96b1c3; /* Grayish blue paragraph background*/
+  padding: 20px;
+}
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+.content li {
+  margin-bottom: 10px;
+}
+.active {
+  background-color: #96b1c3; /* 96b1c3 Grayish blue Hover, lighter option: bdcfd9*/
+}
