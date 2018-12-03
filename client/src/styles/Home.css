@@ -1,0 +1,70 @@
+/*sign up/sign in container*/
+.signUp, .signIn{
+    border-radius: 2%;
+    padding: 5%;
+    background-color: #585870;
+}
+
+.btn-primary{
+    border-color: #3A849D !important;
+}
+
+/*sign in/sing up title*/
+.sign-in, .sign-up{
+    text-align: center;
+}
+
+.invalid-feedback {
+    color:rgb(255, 251, 195);
+}
+
+.form-control:focus{
+    border: 2px solid #5BADC5;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.active {
+    background-color: #3A849D !important;
+}
+
+.form-control.is-invalid {
+    border: 2px solid rgb(255, 246, 160);
+}
+
+.form-control.is-invalid:focus{
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 2px solid #5BADC5;
+}
+
+.submit-button{
+    text-align: center;
+    padding-top: 10%;
+}
+
+.signInButtons, .signUpButtons {
+    margin: 15px;
+    text-align: right;
+}
+
+.signInContainer{
+    width: 70%;
+    margin: auto;
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+
+@media screen
+and (max-width: 1024px) {
+    .signInButtons, .signUpButtons {
+        margin: 15px;
+        text-align: center;
+    }
+    .signInContainer{
+        width: 100%;
+        margin: auto;
+        padding-top: 8%;
+        padding-bottom: 8%;
+    }
+}

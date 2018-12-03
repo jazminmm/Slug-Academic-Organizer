@@ -1,0 +1,18 @@
+.capList {
+    padding: 1%;
+    margin: 2%;
+    border-radius:10px;
+    border: 1px solid rgb(63, 65, 82);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.capList1 {
+    padding: 3.5%;
+    grid-column: 1;
+}
+
+.capList2 {
+    padding: 3.5%;
+    grid-column: 2;
+}

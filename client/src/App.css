@@ -1,7 +1,32 @@
-.App {
-  margin-top: 15px;
+body {
+  background:rgb(63, 65, 82);
+  color: white;
 }
 
-.App .navbar-brand {
-  font-weight: bold;
+.main {
+  margin-top: 3rem;
+}
+
+
+select {
+    color: white;
+    background-color: #707088;
+}
+
+
+button{
+  background-color: #5BADC5 !important;
+  transition: 0.2s;
+}
+
+Button:hover{
+  background-color:	#3A849D !important;
+}
+
+.App-loader {
+  width: 200px;
+}
+
+.loaderContainer {
+  margin-top: 20%;
 }

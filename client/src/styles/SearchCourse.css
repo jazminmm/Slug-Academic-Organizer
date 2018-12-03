@@ -1,0 +1,116 @@
+.ais-SearchBox-reset svg,
+.ais-SearchBox-submit svg {
+  fill: white;
+}
+
+.ais-SearchBox-submit,
+.ais-CurrentRefinements-delete {
+  margin:1%;
+}
+
+.ais-RefinementList-checkbox{
+  margin-right: 10px;
+}
+
+button.ais-SearchBox-submit,
+button.ais-SearchBox-reset {
+  padding: 1%;
+  border-radius:10px;
+}
+
+button.ais-CurrentRefinements-delete{
+  padding: 1%;
+  border-radius:10px;
+  color: white;
+}
+
+.ais-ClearRefinements-button {
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.ais-CurrentRefinements-item {
+  padding: 5px;
+}
+
+.search {
+  margin: 2%;
+}
+
+.ais-Pagination-item {
+  padding: 10px;
+}
+
+.ais-CurrentRefinements {
+  border-radius:10px;
+  border: 1px solid #99ddff;
+  padding: 5px;
+}
+
+.ais-CurrentRefinements--noRefinement {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.ais-CurrentRefinements-category{
+  padding-right: 10px;
+}
+
+.Filters{
+  padding: 10px 0px 10px 0px;
+}
+
+.container{
+  padding: 10px;
+}
+
+.pages{
+  margin: auto;
+}
+
+.poweredBy{
+  padding: 10px;
+}
+
+#filterbox,
+.hitResult {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #585870 !important;
+  border-radius:10px;
+}
+
+.active {
+  margin: 1%;
+}
+
+.hitButton{
+  width: 100%;
+}
+
+.hitContainer{
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 4fr 1fr;
+}
+
+a.ais-Pagination-link{
+  color: #3A849D;
+  transition: 0.3s;
+}
+
+.ais-Pagination-item--selected a{
+  color:#5BADC5;
+}
+
+a.ais-Pagination-link:hover{
+  color: white;
+}
+
+ul.ais-Pagination-list {
+  justify-content: center;
+}

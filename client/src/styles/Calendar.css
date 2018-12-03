@@ -4,21 +4,34 @@ h1 {
   margin-bottom: 4%;
 }
 
-button {
-  background-color: #ffefd5 !important;
-}
-
-button:hover {
-  background-color: #fded80 !important;
-}
-
 .fc-event,
 .fc-event-dot {
-  background-color: palevioletred !important;
+  background-color: #5BADC5 !important;
+}
+
+.fc-state-highlight {
+  background-color: #585870 !important;
+}
+
+#calendar button {
+  color: white;
 }
 
 #calendar {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 100%;
+  max-height: 100%;
   margin: 0 auto;
+}
+
+.fc-scroller {
+  min-height: 258px;
+  height: 100% !important;
+}
+
+.fc-list-heading td{
+  background-color: #5BADC5 !important;
+}
+
+.fc-list-empty {
+  background-color: #5BADC5 !important;
 }

@@ -1,0 +1,23 @@
+.gradeContainer {
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.gpaComponent{
+    padding: 15px;
+}
+
+.pnpComponent{
+    padding: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@media screen
+and (max-width: 1024px) {
+    .gradeContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

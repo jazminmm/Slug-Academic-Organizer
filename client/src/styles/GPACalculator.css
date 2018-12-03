@@ -1,0 +1,53 @@
+.GPAInfo{
+	padding: 20px;
+	width: 100%;
+	box-sizing: border-box;
+	background: #5BADC5;
+	border-radius: 20px;
+}
+
+.quarter, .year, .gpatype{
+	margin: 5px 0px 5px 0px;
+}
+
+.year {
+	margin-right: 10px;
+}
+
+.submit {
+	margin: 5px;
+}
+
+.GPAInfo select {
+	width: 100%;
+	background: white;
+	color: rgb(63, 65, 82);
+}
+
+.GPAInfo input {
+	width: 100%;
+	padding: 10px;
+	margin: 5px;
+	border-radius: 5x;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border:solid 1px white;
+}
+
+.resultContainer {
+	margin-top: 10px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	border-radius: 15px;
+	background-color: #585870; 
+}
+
+.GPASubmitButton {
+	margin: 10px;
+}
+
+.result {
+	margin-top: 10px;
+	padding: 10px;
+	text-align: right;
+}

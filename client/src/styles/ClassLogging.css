@@ -1,0 +1,69 @@
+.logContainer {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+}
+
+.searchCol{
+    grid-column: 1;
+}
+
+.logCol{
+    grid-column: 2;
+}
+
+.logDropDown{
+    padding: 100px;
+}
+
+.classContainer {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.quarterClassContainer {
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #585870;
+}
+
+.courseID {
+    padding-left: 20px;
+    padding-top: 20px;
+    grid-column: 1;
+}
+
+.gradeSelect {
+    grid-column: 2;
+}
+
+.deleteButton {
+    padding-top: 15px;
+    padding-right: 20px;
+    grid-column: 3;
+}
+
+.yearButton {
+    width: 100%;
+}
+
+@media screen
+and (max-width: 1024px) {
+    .logContainer {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .searchCol{
+        grid-row: 2;
+        grid-column: auto;
+    }
+
+    .logCol{
+        grid-row: 1;
+        grid-column: auto;
+    }
+}

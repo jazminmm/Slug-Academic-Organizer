@@ -1,0 +1,260 @@
+#completedBorder {
+    border: 1px solid #5BADC5;
+}
+
+#completedBorder hr {
+    border: 1px solid #5BADC5;
+}
+
+.intro {
+    padding: 1%;
+    margin: 2%;
+    border-radius:10px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 50px 1fr;
+}
+
+.regular {
+    text-align: center;
+    padding: 3.5%;
+    border-radius:10px 10px 0px 0px;
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: fit-content(100%);
+}
+
+.regularSection {
+    border-radius:10px;
+    margin-top: 2%;
+    margin-left: 1%;
+    border: 1px solid rgb(63, 65, 82);
+}
+
+.regularSection hr {
+    border-top: 1px solid rgb(63, 65, 82);
+}
+
+.honors {
+    text-align: center;
+    padding: 3.5%;
+    border-radius:10px;
+    border: 1px solid rgb(63, 65, 82);
+}
+
+.cmps12a {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.or1 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.cmps5j {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.or2 {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.cmpe13 {
+    grid-column: 5;
+    grid-row: 1;
+}
+
+.cmps12b {
+    text-align: center;
+    padding: 3.5%;
+    border-radius:0px 0px 10px 10px;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.cs5j {
+    border-radius: 10px;
+}
+
+.math {
+    padding: 1%;
+    margin: 1%;
+    border-radius:10px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr;
+}
+
+.calc1, .calc2, .linear {
+    border: 1px solid rgb(63, 65, 82);
+    text-align: center;
+    padding: 3.5%;
+    border-radius:10px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.math23a {
+    border: 1px solid rgb(63, 65, 82);
+    text-align: center;
+    padding: 3.5%;
+    border-radius:10px;
+}
+
+.math19a, .math19b, .ams10 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.calc1or, .calc2or, .linearor{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.math20a, .math20b, .math21 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.math-ce-container {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ce12, .ce16 {
+    border: 1px solid rgb(63, 65, 82);
+    text-align: center;
+    padding: 3.5%;
+    margin: 2%;
+    border-radius: 10px;
+}
+
+@media screen
+and (max-width: 1024px) 
+and (min-width: 400px){
+    .intro {
+        padding: 1%;
+        margin: 1%;
+        border-radius:10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .regular {
+        text-align: center;
+        padding: 1%;
+        border-radius:10px 10px 0px 0px;
+        grid-column: auto;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+    }
+
+    .cmps12a {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .or1 {
+        grid-column: 2;
+        grid-row: 1;
+        
+    }
+
+    .cmps5j {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .or2 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .cmpe13 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .cmps12b {
+        padding: 3.5%;
+        border-radius:0px 0px 10px 10px;
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .math-ce-container {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen
+and (max-width: 400px){
+    .intro {
+        padding: 1%;
+        margin: 2%;
+        border-radius:10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .regular {
+        text-align: center;
+        padding: 1%;
+        border-radius:10px 10px 0px 0px;
+        grid-column: auto;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .cmps12a {
+        grid-column: auto;
+        grid-row: 1;
+    }
+
+    .or1 {
+        grid-column: auto;
+        grid-row: 2;
+        
+    }
+
+    .cmps5j {
+        grid-column: auto;
+        grid-row: 3;
+    }
+
+    .or2 {
+        grid-column: auto;
+        grid-row: 4;
+    }
+
+    .cmpe13 {
+        grid-column: auto;
+        grid-row: 5;
+    }
+
+    .cmps12b {
+        padding: 3.5%;
+        border-radius:0px 0px 10px 10px;
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .math-ce-container {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 1fr;
+    }
+}

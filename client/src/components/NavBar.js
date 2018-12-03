@@ -1,41 +1,79 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import {
-  Route,
-  NavLink,
-  HashRouter
-} from "react-router-dom";
-import SignIn from "./Home";
-import GERequirements from "./GERequirements";
-import ClassLogging from "./ClassLogging";
-import Calendar from "./Calendar";
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink
+} from "reactstrap";
 import "../styles/NavBar.css";
 
+export default class NavBar extends Component {
+  constructor(props) {
+    super(props);
 
-class NavBar extends Component {
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: true
+    };
+  }
+
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+
   render() {
-
     return (
-      <HashRouter>
-        <div>
-          <h1>Slug Academic Organizer</h1>
-          <ul className="header">
-            <li><NavLink exact to="/">Sign In</NavLink></li>
-            <li><NavLink to="/logging">Class Logging</NavLink></li>
-            <li><NavLink to="/ge">GE Requirements</NavLink></li>
-            <li><NavLink to="/calendar">Calendar</NavLink></li>
-          </ul>
-          <div className="content">
-            <Route exact path="/" component={SignIn} />
-            <Route path="/logging"component={ClassLogging} />
-            <Route path="/ge" component={GERequirements} />
-            <Route path="/calendar" component={Calendar} />
-
-
+      <div>
+        <Navbar color="faded" dark expand="md" role="navigation">
+          <img className="logo" src={require("../images/slug.svg")} alt="logo" />
+          <div className="home-link">
+            <NavbarBrand tag={Link} to="/" className="mr-auto">
+              Slug Organizer
+            </NavbarBrand>
           </div>
-        </div>
-      </HashRouter>
+          <NavbarToggler onClick={this.toggle} className="mr-2" />
+          <Collapse isOpen={!this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem className="link-1">
+                <NavLink tag={Link} to="/">
+                  Account
+                </NavLink>
+              </NavItem>
+              <NavItem className="link-2">
+                <NavLink tag={Link} to="/logging">
+                  Class Logging
+                </NavLink>
+              </NavItem>
+              <NavItem className="link-4">
+                <NavLink tag={Link} to="/grades">
+                  Grades
+                </NavLink>
+              </NavItem>
+              <NavItem className="link-5">
+                <NavLink tag={Link} to="/major">
+                  Major Requirements
+                </NavLink>
+              </NavItem>
+              <NavItem className="link-6">
+                <NavLink tag={Link} to="/ge">
+                  GE Requirements
+                </NavLink>
+              </NavItem>
+              <NavItem className="link-7">
+                <NavLink tag={Link} to="/calendar">
+                  Calendar
+                </NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
     );
   }
 }
-
-export default NavBar;

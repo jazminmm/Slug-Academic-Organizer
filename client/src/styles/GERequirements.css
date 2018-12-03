@@ -1,16 +1,49 @@
-.GETable{
-    padding: 10px;
+.entry{
+    border-radius:10px;
+    padding: 3.5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    border: 1px solid #585870;
+    margin-bottom: 1%
 }
 
 .category{
     text-align: left;
 }
 
-.GE{
-    text-align: justify;
-    padding-left: 20px;
-}
-
 .pageTitle{
     text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 400px 400px;
+    justify-content: center;
+}
+
+.a {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.b {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+@media screen
+and (max-width: 1024px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .a {
+        grid-column: auto;
+    }
+    .b{
+        grid-column: auto;
+    }
 }

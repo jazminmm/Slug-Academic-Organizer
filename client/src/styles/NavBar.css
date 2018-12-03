@@ -1,38 +1,156 @@
-body {
-  background-color: #f8f8fb; /*light grayish blue background*/
-  padding: 20px;
-  margin: 0;
-}
-h1, h2, p, ul, li {
-  font-family: sans-serif;
-}
-ul.header li {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
-}
-ul.header {
-  background-color: #7d9fb5; /*slightly desaturated blue navbar*/
-  padding: 0;
-}
-ul.header li a { /*black header words, very dark gray option: 474747*/
-  color: #111;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 20px;
-  display: inline-block;
-}
 .content {
-  background-color: #96b1c3; /* Grayish blue paragraph background*/
+  border-top: 2px solid rgb(255, 255, 255);
+  background-color: transparent;
   padding: 20px;
 }
+
 .content h2 {
   padding: 0;
   margin: 0;
 }
+
 .content li {
   margin-bottom: 10px;
 }
-.active {
-  background-color: #96b1c3; /* 96b1c3 Grayish blue Hover, lighter option: bdcfd9*/
+
+/* LINK ANIMATIONS IN NAVBAR
+ * https://codepen.io/martinwolf/pen/eNNdme
+ * --------------------------------------------------------
+*/
+.home-link,
+.link-1,
+.link-2,
+.link-3,
+.link-4,
+.link-5,
+.link-6,
+.link-7,
+.link-8 {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.logo {
+  width: 50px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+/* Home Link */
+.home-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #5BADC5;
+  transition: width 0.3s;
+}
+
+.home-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+/* Sign In Link */
+.link-1::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #5BADC5;
+  transition: width 0.3s;
+}
+
+.link-1:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+/* Class Logging Link */
+.link-2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #5BADC5;
+  transition: width 0.3s;
+}
+
+.link-2:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+/* P/NP Link */
+.link-3::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #5BADC5;
+  transition: width 0.3s;
+}
+
+.link-3:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+/* GPA Link */
+.link-4::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #5BADC5;
+  transition: width 0.3s;
+}
+
+.link-4:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+/* GE Req Link */
+.link-5::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #5BADC5;
+  transition: width 0.3s;
+}
+
+.link-5:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+/* Calendar Link */
+.link-6::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #5BADC5;
+  transition: width 0.3s;
+}
+
+.link-6:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.link-7::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #5BADC5;
+  transition: width 0.3s;
+}
+
+.link-7:hover::after {
+  width: 100%;
+  transition: width 0.3s;
 }

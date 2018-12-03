@@ -1,13 +1,13 @@
 .classInfo{
 	padding: 20px;
 	width: 245px;
-	height: 200px;
+	height: 245px;
 	box-sizing: border-box;
 	background: #fdf7ff;
 	border-radius: 20px;
 }
 
-.class, .quarter, .year {
+.class, .quarter, .year, .grade, .units{
 	padding: 5px;
 }
 

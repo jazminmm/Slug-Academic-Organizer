@@ -10,30 +10,59 @@ module.exports = app => {
   app.post("/api/account/signup", (req, res, next) => {
     const { body } = req;
     const { password } = body;
-    let { email } = body;
+    let { username } = body;
 
-    if (!email) {
+	if (!password && !username) {
       return res.send({
         success: false,
-        message: "Error: Email cannot be blank."
+        messagePass: "Error: Password cannot be blank",
+        messageUser: "Error: Username cannot be blank"
       });
     }
-    if (!password) {
+    if ((username.length < 3) || !checkUser(username)) {
       return res.send({
         success: false,
-        message: "Error: Password cannot be blank."
+        messageUser: "Error: Username must contain at least 3 letters"
       });
     }
+    if ((password.length < 5) || !checkCase(password)) {
+      return res.send({
+        success: false,
+        messagePass: "Error: Password must contain an uppercase and numeric and be longer than 5 characters"
+      });
+    }
+	// function to check password criteria
+	function checkCase(pw) {
+		let uppercase = 0;
+		let numeric = 0;
+		for(i = 0; i < pw.length; i++) {
+			if('A' <= pw[i] && pw[i] <= 'Z') uppercase++; // check if you have an uppercase
+			if('0' <= pw[i] && pw[i] <= '9') numeric++; // check if you have a numeric
+		}
+		if((uppercase >= 1) && (numeric >= 1)) return true;
+		else return false;
+	}
+	// function to check username criteria
+	function checkUser(usr) {
+		let uppercase = 0;
+		let lowercase = 0;
+		for(i = 0; i < usr.length; i++) {
+			if('A' <= usr[i] && usr[i] <= 'Z') uppercase++; // check if you have an uppercase
+			if('a' <= usr[i] && usr[i] <= 'z') lowercase++; // check if you have a lowercase
+		}
+		if(uppercase+lowercase >= 3) return true;
+		else return false;
+	}
 
-    email = email.toLowerCase();
-    email = email.trim();
+    username = username.toLowerCase();
+    username = username.trim();
 
     // Steps:
-    // 1. Verify email doesn't exist
+    // 1. Verify username doesn't exist
     // 2. Save
     User.find(
       {
-        email: email
+        username: username
       },
       (err, previousUsers) => {
         if (err) {
@@ -44,14 +73,14 @@ module.exports = app => {
         } else if (previousUsers.length > 0) {
           return res.send({
             success: false,
-            message: "Error: Account already exist."
+            message: "Error: Account already exists."
           });
         }
 
         // Save the new user
         const newUser = new User();
 
-        newUser.email = email;
+        newUser.username = username;
         newUser.password = newUser.generateHash(password);
         newUser.save((err, user) => {
           if (err) {
@@ -72,27 +101,36 @@ module.exports = app => {
   app.post("/api/account/signin", (req, res, next) => {
     const { body } = req;
     const { password } = body;
-    let { email } = body;
+    let { username } = body;
 
-    if (!email) {
+	
+	if (!password && !username) {
       return res.send({
         success: false,
-        message: "Error: Email cannot be blank."
-      });
-    }
-    if (!password) {
-      return res.send({
-        success: false,
-        message: "Error: Password cannot be blank."
+        messagePass: "Error: Password cannot be blank.",
+        messageUser: "Error: Username cannot be blank"
       });
     }
 
-    email = email.toLowerCase();
-    email = email.trim();
+    if (!username && password) {
+      return res.send({
+        success: false,
+        messageUser: "Error: Username cannot be blank."
+      });
+    }
+    if (!password && username) {
+      return res.send({
+        success: false,
+        messagePass: "Error: Password cannot be blank."
+      });
+    }
+	
+    username = username.toLowerCase();
+    username = username.trim();
 
     User.find(
       {
-        email: email
+        username: username
       },
       (err, users) => {
         if (err) {
@@ -105,7 +143,7 @@ module.exports = app => {
         if (users.length != 1) {
           return res.send({
             success: false,
-            message: "Error: Invalid"
+            messageUser: "Error: Invalid Username"
           });
         }
 
@@ -113,7 +151,7 @@ module.exports = app => {
         if (!user.validPassword(password)) {
           return res.send({
             success: false,
-            message: "Error: Invalid"
+            messagePass: "Error: Invalid Password"
           });
         }
 

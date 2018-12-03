@@ -1,0 +1,22 @@
+.calculatePNPButton {
+    margin: 10px;
+}
+
+.progress-bar {
+    background-color: #3A849D;
+}
+
+.pnpContainer {
+	padding: 20px;
+	width: 100%;
+	box-sizing: border-box;
+	background: #5BADC5;
+	border-radius: 20px;
+}
+
+.pnpResult {
+    margin-bottom: 10px;
+    padding: 10px;
+	border-radius: 15px;
+	background-color: #707088; 
+}

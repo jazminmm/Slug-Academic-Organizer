@@ -1,0 +1,17 @@
+export const Aplus = 0;
+export const A = 1;
+export const Aminus = 2;
+export const Bplus = 3;
+export const B = 4;
+export const Bminus = 5;
+export const Cplus = 6;
+export const C = 7;
+export const Cminus = 8;
+export const Dplus = 9;
+export const D = 10;
+export const Dminus = 11;
+export const F = 12;
+export const W = 13;
+export const uncompleted = 14;
+export const P = 15;
+export const NP = 16;

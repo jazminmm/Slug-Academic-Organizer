@@ -1,0 +1,32 @@
+.upperdiv {
+    padding: 3.5%;
+    border-radius:10px;
+    border: 1px solid rgb(63, 65, 82);
+    text-align: center;
+}
+
+.upperDivs {
+    padding: 1%;
+    margin: 1%;
+    display: grid;
+    grid-gap: 15px 35px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.stats {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen
+and (max-width: 1024px) {
+    .upperDivs {
+        padding: 1%;
+        margin: 2%;
+        border-radius:10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+}
